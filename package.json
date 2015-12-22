@@ -1,0 +1,32 @@
+{
+  "name": "react-google-chart",
+  "version": "0.0.0",
+  "description": "React component for Google Charts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kodyl/react-google-chart.git"
+  },
+  "author": "Daniel Juhl <danieljuhl@gmail.com> (http://danieljuhl.dk/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kodyl/react-google-chart/issues"
+  },
+  "homepage": "https://github.com/kodyl/react-google-chart#readme",
+  "devDependencies": {
+    "babel": "^6.3.13",
+    "babel-cli": "^6.3.17",
+    "babel-eslint": "^4.1.6",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "eslint": "^1.10.3",
+    "eslint-plugin-react": "^3.12.0",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "semver": "^5.1.0"
+  }
+}
