@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/kodyl/react-google-chart.git"
   },
-  "author": "Daniel Juhl <danieljuhl@gmail.com> (http://danieljuhl.dk/)",
+  "author": "Daniel Juhl <danieljuhl@gmail.com> (http://danieljuhl.dk/), Martin Kure <martin_kure@hotmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kodyl/react-google-chart/issues"
