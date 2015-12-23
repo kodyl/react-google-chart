@@ -2,12 +2,12 @@
 React component for Google Charts
 
 
-# installation
+# Installation
 ```
 npm i react-google-chart --save
 ```
 
-# example
+# Example
 
 unique-id is set automatically by the module.
 
@@ -31,5 +31,5 @@ unique-id is set automatically by the module.
 
 
 ```
-## Further notice
+#### Further notice
 The entire Google Chart API is available in this module. The events are not build into this version of the module, though. However the events and further upgrades will come in later versions. 
