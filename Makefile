@@ -9,7 +9,8 @@ define release
 	make build && \
 	npm --no-git-tag-version version $(1) -m 'release %s' && \
 	git add . && \
-	git commit -m 'make build and release'
+	git commit -m 'make build and release' && \
+	git tag $$NEXT_VERSION
 endef
 
 clean:
