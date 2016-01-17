@@ -24,7 +24,7 @@ dist/%.js: lib/%.js
 	@ mkdir -p $(@D)
 	$(BIN)/babel $< -o $@
 
-build: clean dist
+build: lint clean dist
 
 pre-release: lint
 
