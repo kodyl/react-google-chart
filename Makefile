@@ -37,4 +37,7 @@ release-minor: pre-release
 release-major: pre-release
 	$(call release,major)
 
+publish:
+	@ npm publish && git push --tags
+
 .PHONY: install release-patch release-minor release-major
