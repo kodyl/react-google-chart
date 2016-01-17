@@ -1,6 +1,6 @@
 'use strict';
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -16,6 +16,10 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _googleJsapiLoader = require('./google-jsapi-loader');
 
+var _generateId = require('./generate-id');
+
+var _generateId2 = _interopRequireDefault(_generateId);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24,26 +28,21 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-function generateId() {
-  var charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
-  var id = '';
-  for (var i = 6; i; i--) {
-    id += charset.charAt(Math.floor(Math.random() * charset.length));
-  }
-
-  return id;
-}
-
-var GoogleChart = (function (_Component) {
+var GoogleChart = function (_Component) {
   _inherits(GoogleChart, _Component);
 
-  function GoogleChart(props) {
+  function GoogleChart() {
+    var _Object$getPrototypeO;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, GoogleChart);
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(GoogleChart).call(this, props));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
 
-    _this.drawChart = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(GoogleChart)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.drawChart = function () {
       var _this$props = _this.props;
       var containerId = _this$props.containerId;
       var chartType = _this$props.chartType;
@@ -58,9 +57,7 @@ var GoogleChart = (function (_Component) {
           options: options
         }).draw(_reactDom2.default.findDOMNode(_this));
       }
-    };
-
-    return _this;
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(GoogleChart, [{
@@ -84,7 +81,7 @@ var GoogleChart = (function (_Component) {
   }]);
 
   return GoogleChart;
-})(_react.Component);
+}(_react.Component);
 
 GoogleChart.propTypes = {
   chartType: _react2.default.PropTypes.string.isRequired,
@@ -95,7 +92,7 @@ GoogleChart.propTypes = {
   width: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.number]).isRequired
 };
 GoogleChart.defaultProps = {
-  containerId: generateId(),
+  containerId: (0, _generateId2.default)(),
   onError: function onError() {},
   options: {}
 };
